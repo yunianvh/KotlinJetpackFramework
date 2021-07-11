@@ -6,7 +6,7 @@ package com.yangchoi.versionbuild
 object AndroidConfig {
     const val compileSdkVersion = 30
     const val buildToolsVersion = "30.0.3"
-    const val applicationId = "com.yangchoi.mvvm"
+    const val applicationId = "com.yangchoi.kotlinjetpackframework"
     const val minSdkVersion = 21
     const val targetSdkVersion = 30
     const val versionCode = 1

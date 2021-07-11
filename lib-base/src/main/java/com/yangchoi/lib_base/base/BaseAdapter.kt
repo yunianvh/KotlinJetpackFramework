@@ -73,8 +73,9 @@ abstract class BaseAdapter<VB : ViewBinding, T>(
     }
     /**
      * 返回当前adapter的数据集合
+     * @return
      * */
-    fun getAdapter():MutableList<T>{
+    fun getADDataList():MutableList<T>{
         return dataList
     }
 }

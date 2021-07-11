@@ -1,6 +1,7 @@
 import com.yangchoi.versionbuild.AndroidConfig
-import com.yangchoi.versionbuild.LibsAndroidX
 import com.yangchoi.versionbuild.LibsGitHub
+import com.yangchoi.versionbuild.LibsJetpack
+import com.yangchoi.versionbuild.LibsKotlin
 
 plugins {
     id 'com.android.library'
@@ -22,13 +23,6 @@ android {
             }
         }
     }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -36,27 +30,14 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures {
-        viewBinding = true
-    }
-    packagingOptions {
-        exclude 'META-INF/*'
-        exclude 'META-INF/NOTICE' // will not include NOTICE file
-        exclude 'META-INF/LICENSE' // will not include LICENSE file
-        exclude 'META-INF/INDEX.LIST' // will not include INDEX.LIST file
-        exclude 'META-INF/DEPENDENCIES'
-        exclude 'META-INF/gradle/incremental.annotation.processors'
-    }
-    resourcePrefix "network_"
 }
 
 dependencies {
-    implementation project(':lib-base')
-
-    implementation LibsGitHub.OkHttp
-    implementation LibsGitHub.OkHttpInterceptorLogging
-    implementation LibsGitHub.Retrofit
-    implementation LibsGitHub.RetrofitConverterGson
+    implementation LibsKotlin.Kotlin
+    implementation LibsGitHub.MMKV
+    implementation LibsJetpack.RoomRunTime
+    implementation LibsJetpack.RoomCompiler
+    implementation project(path: ':lib-base')
     //因为在lib-base里面添加了api  这里只需要添加compiler就行了
     kapt LibsGitHub.ARouteCompiler
 }

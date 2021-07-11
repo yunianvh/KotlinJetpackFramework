@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="c333">#333333</color>
+    <color name="c666">#666666</color>
+    <color name="c999">#999999</color>
+    <color name="cf80">#f8f8f8</color>
+    <color name="ce80">#E8E8E8</color>
+</resources>
