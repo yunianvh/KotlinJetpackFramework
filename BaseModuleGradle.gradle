@@ -1,0 +1,70 @@
+import com.yangchoi.versionbuild.AndroidConfig
+import com.yangchoi.versionbuild.LibsAndroid
+import com.yangchoi.versionbuild.LibsAndroidX
+import com.yangchoi.versionbuild.LibsGoogle
+import com.yangchoi.versionbuild.LibsKotlin
+import com.yangchoi.versionbuild.LibsGitHub
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+
+android {
+    compileSdkVersion AndroidConfig.compileSdkVersion
+    buildToolsVersion AndroidConfig.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion AndroidConfig.minSdkVersion
+        targetSdkVersion AndroidConfig.targetSdkVersion
+        versionCode AndroidConfig.versionCode
+        versionName AndroidConfig.versionName
+
+        testInstrumentationRunner LibsAndroidX.AndroidJUnitRunner
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+    packagingOptions {
+        exclude 'META-INF/*'
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        exclude 'META-INF/INDEX.LIST' // will not include INDEX.LIST file
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/gradle/incremental.annotation.processors'
+    }
+}
+
+dependencies {
+
+    implementation LibsKotlin.Kotlin
+    implementation LibsAndroidX.CoreKtx
+    implementation LibsAndroidX.AppCompat
+    implementation LibsGoogle.GoogleMaterial
+    implementation LibsAndroidX.NavigationUI
+    implementation LibsAndroidX.NavigationFragment
+    testImplementation LibsAndroid.Junit
+    androidTestImplementation LibsAndroidX.TestExtJunit
+    androidTestImplementation LibsAndroidX.TestEspresso
+
+    implementation project(path: ':lib-base')
+    implementation project(path: ':lib-network')
+    implementation project(path: ':lib-public')
+
+    implementation LibsGitHub.UtilCodeX
+    implementation LibsGitHub.MMKV
+    implementation LibsGoogle.FlexBox
+}
