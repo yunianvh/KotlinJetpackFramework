@@ -18,18 +18,14 @@ import java.util.*
  * describe:
  */
 class HistoryAdapter(context: Activity, private var dataList:MutableList<SearchHistoryEntity>)
-    : BaseAdapter<ItemHistoryBinding,SearchHistoryEntity>(context,dataList as ArrayList<SearchHistoryEntity>) {
+    : BaseAdapter<ItemHistoryBinding,SearchHistoryEntity>(context,dataList) {
 
     private var mInflater: LayoutInflater? = null
     private val mFlexItemTextViewCaches: Queue<TextView> = LinkedList()
 
-    interface MenuItemClickListener{
-        fun onMenuItemClick(dataBean: HotKeyEntity,menuPosition:Int)
-    }
-    private var onMenuItemClickListener:MenuItemClickListener? = null
-    
-    internal fun setOnMenuItemClickListener(onMenuItemClickListener:MenuItemClickListener){
-        this.onMenuItemClickListener = onMenuItemClickListener
+    private var childItemClick:((Int)->Unit)? = null
+    fun setChildItemClick(itemClick:(Int)->Unit){
+        childItemClick = itemClick
     }
 
     override fun convert(viewBind: ItemHistoryBinding, item: SearchHistoryEntity, position: Int) {
@@ -39,9 +35,11 @@ class HistoryAdapter(context: Activity, private var dataList:MutableList<SearchH
             childTv.text = dataList[i].content
             viewBind.fblKnowledge.addView(childTv)
 
-//            childTv.setOnClickListener {
-//                onMenuItemClickListener?.onMenuItemClick(dataList[i],i)
-//            }
+            childTv.setOnClickListener {
+                childItemClick?.let {
+                    it(position)
+                }
+            }
         }
     }
 

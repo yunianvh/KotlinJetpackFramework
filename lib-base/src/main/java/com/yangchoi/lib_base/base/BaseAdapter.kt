@@ -14,11 +14,11 @@ import java.lang.reflect.ParameterizedType
  *          如果item有需求要设置为固定宽高，可以在子类的convert方法里，通过代码设置
  *
  * @param mContext 上下文对象  activity
- * @param dataList 数据集合
+ * @param dataListAD 数据集合
  */
 abstract class BaseAdapter<VB : ViewBinding, T>(
     var mContext: Activity,
-    var dataList: MutableList<T>
+    var dataListAD: MutableList<T>
 ) : RecyclerView.Adapter<BaseViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
@@ -42,13 +42,13 @@ abstract class BaseAdapter<VB : ViewBinding, T>(
             true
         }
 
-        convert(holder.v as VB, dataList[position], position)
+        convert(holder.v as VB, dataListAD[position], position)
     }
 
     abstract fun convert(viewBind: VB, item: T, position: Int)
 
     override fun getItemCount(): Int {
-        return dataList.size
+        return dataListAD.size
     }
 
 
@@ -76,6 +76,6 @@ abstract class BaseAdapter<VB : ViewBinding, T>(
      * @return
      * */
     fun getADDataList():MutableList<T>{
-        return dataList
+        return dataListAD
     }
 }

@@ -65,4 +65,7 @@ object VersionGitHub{
     const val CookieX = "v1.0.1"                        // cookie
     const val Immersionbar = "3.0.0"                    //沉浸式状态栏
     const val Bannerviewpager = "2.2.1"                 //轮播图
+    const val SmartRefresh = "2.0.1"                    //刷新组件
+    const val Badgeview = "1.1.3"                       //角标
+    const val XPopup = "2.4.5"                          //popupWindow
 }

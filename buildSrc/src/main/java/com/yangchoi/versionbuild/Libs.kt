@@ -74,4 +74,9 @@ object LibsGitHub {
     const val Immersionbar = "com.gyf.immersionbar:immersionbar:${VersionGitHub.Immersionbar}"
     const val ImmersionbarFragment = "com.gyf.immersionbar:immersionbar-components:${VersionGitHub.Immersionbar}"
     const val Bannerviewpager = "io.github.youth5201314:banner:${VersionGitHub.Bannerviewpager}"
+    const val RefreshLayoutKernel = "com.scwang.smart:refresh-layout-kernel:${VersionGitHub.SmartRefresh}"
+    const val RefreshHeadClassic = "com.scwang.smart:refresh-header-classics:${VersionGitHub.SmartRefresh}"
+    const val RefreshFoodClassic = "com.scwang.smart:refresh-footer-classics:${VersionGitHub.SmartRefresh}"
+    const val Badgeview = "q.rorbin:badgeview:${VersionGitHub.Badgeview}"
+    const val XPopupWindow = "com.github.li-xiaojun:XPopup:${VersionGitHub.XPopup}"
 }

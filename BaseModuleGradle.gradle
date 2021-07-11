@@ -16,10 +16,12 @@ android {
     defaultConfig {
         minSdkVersion AndroidConfig.minSdkVersion
         targetSdkVersion AndroidConfig.targetSdkVersion
-        versionCode AndroidConfig.versionCode
-        versionName AndroidConfig.versionName
-
-        testInstrumentationRunner LibsAndroidX.AndroidJUnitRunner
+        //ARouter
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
 
     buildTypes {
@@ -67,4 +69,6 @@ dependencies {
     implementation LibsGitHub.UtilCodeX
     implementation LibsGitHub.MMKV
     implementation LibsGoogle.FlexBox
+    //ARouter
+    kapt LibsGitHub.ARouteCompiler
 }

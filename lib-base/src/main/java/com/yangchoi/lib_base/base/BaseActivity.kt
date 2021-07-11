@@ -1,8 +1,10 @@
 package com.yangchoi.lib_base.base
 
 import android.app.ProgressDialog
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentActivity
@@ -16,6 +18,7 @@ import com.yangchoi.lib_base.R
 import com.yangchoi.lib_base.error.ErrorResult
 import com.yangchoi.lib_base.utils.EventCode
 import com.yangchoi.lib_base.utils.EventMessage
+import com.yangchoi.lib_base.utils.StatusBarUtil
 import org.greenrobot.eventbus.EventBus
 import java.lang.reflect.ParameterizedType
 
@@ -67,11 +70,18 @@ abstract class BaseActivity<VM: BaseViewModel,VB: ViewBinding> : AppCompatActivi
         val method = clazz2.getMethod("inflate", LayoutInflater::class.java)
         v = method.invoke(null, layoutInflater) as VB
 
+        StatusBarUtil.StatusBarLightMode(this)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            val window: Window = window
+            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        }
+
         setContentView(v.root)
 
         mContext = this
 
-        initImmersionBar()
+//        initImmersionBar()
 
         init()
         initView()

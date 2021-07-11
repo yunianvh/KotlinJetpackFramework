@@ -8,6 +8,7 @@ import com.yangchoi.versionbuild.LibsKotlin
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -22,6 +23,12 @@ android {
         versionName AndroidConfig.versionName
 
         testInstrumentationRunner LibsAndroidX.AndroidJUnitRunner
+        //ARouter
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
 
     buildTypes {
@@ -89,9 +96,20 @@ dependencies {
     if (!singleModule.toBoolean()){
         implementation project(path: ':lib-base')
         implementation project(path: ':lib-network')
+        implementation project(path: ':lib-public')
+        implementation project(path: ':module-home')
+        implementation project(path: ':module-project')
+        implementation project(path: ':module-mine')
     }
-
-    implementation LibsGitHub.ARoute
-    implementation LibsGitHub.ARouteCompiler
+    //工具类
+    implementation LibsGitHub.UtilCodeX
+    //刷新组件
+    implementation LibsGitHub.RefreshLayoutKernel
+    implementation LibsGitHub.RefreshHeadClassic
+    implementation LibsGitHub.RefreshFoodClassic
+    //Badgeview 右上角红点
+    implementation LibsGitHub.Badgeview
+    //ARouter
+    kapt LibsGitHub.ARouteCompiler
 
 }

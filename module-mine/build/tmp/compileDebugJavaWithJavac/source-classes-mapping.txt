@@ -1,4 +1,12 @@
-com/yangchoi/module_mine/BuildConfig.java
- com.yangchoi.module_mine.BuildConfig
+com/yangchoi/module_mine/databinding/ActivityUserInfoBinding.java
+ com.yangchoi.module_mine.databinding.ActivityUserInfoBinding
+com/alibaba/android/arouter/routes/ARouter$$Root$$modulemine.java
+ com.alibaba.android.arouter.routes.ARouter$$Root$$modulemine
 com/yangchoi/module_mine/databinding/FragmentMineBinding.java
  com.yangchoi.module_mine.databinding.FragmentMineBinding
+com/alibaba/android/arouter/routes/ARouter$$Providers$$modulemine.java
+ com.alibaba.android.arouter.routes.ARouter$$Providers$$modulemine
+com/yangchoi/module_mine/BuildConfig.java
+ com.yangchoi.module_mine.BuildConfig
+com/alibaba/android/arouter/routes/ARouter$$Group$$mine.java
+ com.alibaba.android.arouter.routes.ARouter$$Group$$mine

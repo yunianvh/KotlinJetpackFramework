@@ -1,13 +1,18 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.yangchoi.module_mine"
-4    android:versionCode="1"
-5    android:versionName="1.0" >
-6
-7    <uses-sdk
-8        android:minSdkVersion="21"
-8-->D:\android\android project\KotlinJetpack\module-mine\src\main\AndroidManifest.xml
-9        android:targetSdkVersion="30" />
-9-->D:\android\android project\KotlinJetpack\module-mine\src\main\AndroidManifest.xml
-10
-11</manifest>
+3    package="com.yangchoi.module_mine" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="21"
+6-->D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
+7        android:targetSdkVersion="30" />
+7-->D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
+8
+9    <application>
+9-->D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:5:5-7:19
+10        <activity android:name="com.yangchoi.module_mine.activity.UserInfoActivity" />
+10-->D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:6:9-62
+10-->D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:6:19-60
+11    </application>
+12
+13</manifest>

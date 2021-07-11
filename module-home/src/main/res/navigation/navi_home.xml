@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragment_home"
-        android:name="com.yangchoi.module_tab.ui.fragment.HomeFragment"
+        android:name="com.yangchoi.module_tab.fragment.HomeFragment"
         tools:layout="@layout/fragment_home"/>
 
 </navigation>
