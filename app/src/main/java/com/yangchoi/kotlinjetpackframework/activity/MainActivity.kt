@@ -12,9 +12,9 @@ import androidx.lifecycle.Lifecycle
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.blankj.utilcode.util.ToastUtils
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView
-import com.obtjusha.app.model.MainActivityModel
 import com.yangchoi.kotlinjetpackframework.R
 import com.yangchoi.kotlinjetpackframework.databinding.ActivityMainBinding
+import com.yangchoi.kotlinjetpackframework.model.MainActivityModel
 import com.yangchoi.lib_base.base.BaseActivity
 import com.yangchoi.lib_public.utils.ARouterUtil
 import com.yangchoi.module_mine.fragment.MineFragment

@@ -1,8 +1,8 @@
 package com.yangchoi.kotlinjetpackframework.activity
 
 import android.content.Intent
-import com.obtjusha.app.model.SplashActivityModel
 import com.yangchoi.kotlinjetpackframework.databinding.ActivitySplashBinding
+import com.yangchoi.kotlinjetpackframework.model.SplashActivityModel
 import com.yangchoi.lib_base.base.BaseActivity
 
 /**
