@@ -1,31 +1,31 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:2:1-9:12
-INJECTED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:2:1-9:12
-INJECTED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:2:1-9:12
+ADDED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:2:1-9:12
+INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:2:1-9:12
+INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:2:1-9:12
 	package
-		ADDED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:3:5-39
-		INJECTED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
-		INJECTED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
+		ADDED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:3:5-39
+		INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
+		INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:5:5-7:19
+ADDED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:5:5-7:19
 activity#com.yangchoi.module_mine.activity.UserInfoActivity
-ADDED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:6:9-62
+ADDED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:6:9-62
 	android:name
-		ADDED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:6:19-60
+		ADDED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:6:19-60
 uses-sdk
-INJECTED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
-INJECTED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
-INJECTED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
-INJECTED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
+INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
+INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
+INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
+INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
-		ADDED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
-		INJECTED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
+		INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
+		ADDED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
+		INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
-		ADDED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
-		INJECTED from D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
+		INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
+		ADDED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
+		INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml

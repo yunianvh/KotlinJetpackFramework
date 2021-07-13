@@ -2071,6 +2071,7 @@ int drawable ic_mtrl_chip_checked_circle 0x0
 int drawable ic_mtrl_chip_close_circle 0x0
 int drawable icon_back_left 0x0
 int drawable icon_delete 0x0
+int drawable icon_logo 0x0
 int drawable icon_menu 0x0
 int drawable icon_next 0x0
 int drawable icon_search 0x0
@@ -2654,6 +2655,7 @@ int layout text_view_with_line_height_from_layout 0x0
 int layout text_view_with_line_height_from_style 0x0
 int layout text_view_with_theme_line_height 0x0
 int layout text_view_without_line_height 0x0
+int mipmap icon_logo 0x0
 int navigation navi_mine 0x0
 int plurals mtrl_badge_content_description 0x0
 int string abc_action_bar_home_description 0x0

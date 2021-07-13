@@ -78,7 +78,7 @@ dependencies {
     implementation LibsGitHub.Glide
     implementation LibsGitHub.RecyclerViewAdapter
     implementation LibsGitHub.StatusBar
-    implementation LibsGitHub.EventBus
+    api LibsGitHub.EventBus
     implementation LibsGitHub.EventBusAPT
 
     implementation LibsGitHub.UtilCodeX

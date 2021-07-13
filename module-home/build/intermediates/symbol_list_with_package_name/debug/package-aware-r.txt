@@ -2096,6 +2096,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable icon_back_left
 drawable icon_delete
+drawable icon_logo
 drawable icon_menu
 drawable icon_next
 drawable icon_search
@@ -2702,6 +2703,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+mipmap icon_logo
 navigation navi_home
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description

@@ -1,11 +1,15 @@
 package com.yangchoi.module_tab.fragment
 
 import android.content.Intent
+import android.util.Log
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alibaba.android.arouter.launcher.ARouter
 import com.yangchoi.lib_base.base.BaseFragment
+import com.yangchoi.lib_base.utils.MessageEvent
+import com.yangchoi.lib_base.utils.MessageInfo
+import com.yangchoi.lib_base.utils.MessageType
 import com.yangchoi.lib_network.entity.ArticleBean
 import com.yangchoi.lib_network.entity.ArticleListBean
 import com.yangchoi.lib_network.entity.BannerEntity
@@ -80,6 +84,17 @@ class HomeFragment : BaseFragment<HomeFragmentVM, FragmentHomeBinding>(),View.On
         when(v?.id){
             R.id.btn_search -> startActivity(Intent(requireActivity(),
                 SearchActivity::class.java))
+        }
+    }
+
+    override fun handleEvent(event: MessageEvent) {
+        super.handleEvent(event)
+        when(event.type){
+            MessageType.RefreshData ->{
+                if (event.getString().equals(MessageInfo.RefreshOrderInfo)){
+                    Log.e("eventTAGSSSSS","刷新数据")
+                }
+            }
         }
     }
 

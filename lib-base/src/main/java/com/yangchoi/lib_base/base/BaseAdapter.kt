@@ -50,6 +50,13 @@ abstract class BaseAdapter<VB : ViewBinding, T>(
     override fun getItemCount(): Int {
         return dataListAD.size
     }
+    /**
+     * 设置新数据
+     * */
+    fun setNewData(dataListAD: MutableList<T>){
+        this.dataListAD = dataListAD
+        notifyDataSetChanged()
+    }
 
 
     private var itemClick: ((Int) -> Unit)? = null

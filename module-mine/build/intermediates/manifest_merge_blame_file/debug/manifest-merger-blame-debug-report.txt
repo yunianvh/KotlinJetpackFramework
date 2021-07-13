@@ -4,15 +4,15 @@
 4
 5    <uses-sdk
 6        android:minSdkVersion="21"
-6-->D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
+6-->D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
 7        android:targetSdkVersion="30" />
-7-->D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
+7-->D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
 8
 9    <application>
-9-->D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:5:5-7:19
+9-->D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:5:5-7:19
 10        <activity android:name="com.yangchoi.module_mine.activity.UserInfoActivity" />
-10-->D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:6:9-62
-10-->D:\android\AndroidDemo\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:6:19-60
+10-->D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:6:9-62
+10-->D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:6:19-60
 11    </application>
 12
 13</manifest>

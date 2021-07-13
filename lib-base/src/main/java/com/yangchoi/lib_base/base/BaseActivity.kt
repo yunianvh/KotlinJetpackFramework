@@ -16,10 +16,11 @@ import com.blankj.utilcode.util.ToastUtils
 import com.gyf.immersionbar.ImmersionBar
 import com.yangchoi.lib_base.R
 import com.yangchoi.lib_base.error.ErrorResult
-import com.yangchoi.lib_base.utils.EventCode
-import com.yangchoi.lib_base.utils.EventMessage
+import com.yangchoi.lib_base.utils.MessageEvent
 import com.yangchoi.lib_base.utils.StatusBarUtil
 import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
+import org.greenrobot.eventbus.ThreadMode
 import java.lang.reflect.ParameterizedType
 
 /**
@@ -105,8 +106,6 @@ abstract class BaseActivity<VM: BaseViewModel,VB: ViewBinding> : AppCompatActivi
     }
 
     private fun init() {
-//        if (!EventBus.getDefault().isRegistered(this))
-//            EventBus.getDefault().register(this)
         //loading
         vm.isShowLoading.observe(this, Observer {
             if (it) showLoading() else dismissLoading()
@@ -132,20 +131,36 @@ abstract class BaseActivity<VM: BaseViewModel,VB: ViewBinding> : AppCompatActivi
     }
 
     /**
-     * 消息、事件接收回调
-     */
-    open fun handleEvent(msg: EventMessage) {
-        if (msg.code == EventCode.LOGIN_OUT) {
-            finish()
-        }
-    }
-
-    /**
      * 接口请求错误回调
      */
     open fun errorResult(errorResult: ErrorResult) {}
-
+    /**
+     * 注册event事件
+     * */
+    override fun onResume() {
+        super.onResume()
+        if (!EventBus.getDefault().isRegistered(this))
+            EventBus.getDefault().register(this)
+    }
+    /**
+     * 解绑event事件
+     * */
     override fun onDestroy() {
         super.onDestroy()
+        if (EventBus.getDefault().isRegistered(this))
+            EventBus.getDefault().unregister(this)
+    }
+    /**
+     * event事件传递
+     * */
+    @Subscribe(threadMode = ThreadMode.MAIN,sticky = true)
+    fun onEventMainThread(event: MessageEvent) {
+        handleEvent(event)
+    }
+    /**
+     * 消息、事件接收回调
+     */
+    open fun handleEvent(event: MessageEvent) {
+
     }
 }

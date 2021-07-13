@@ -14,9 +14,10 @@ import androidx.viewbinding.ViewBinding
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.yangchoi.lib_base.error.ErrorResult
-import com.yangchoi.lib_base.utils.EventMessage
+import com.yangchoi.lib_base.utils.MessageEvent
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
+import org.greenrobot.eventbus.ThreadMode
 import java.lang.reflect.ParameterizedType
 
 /**
@@ -92,7 +93,17 @@ abstract class BaseFragment<VM : BaseViewModel, VB : ViewBinding> : Fragment() {
             errorResult(it)
         })
     }
-
+    /**
+     * 注册event事件
+     * */
+    override fun onResume() {
+        super.onResume()
+        if (!EventBus.getDefault().isRegistered(this))
+            EventBus.getDefault().register(this)
+    }
+    /**
+     * 解绑event事件
+     * */
     override fun onDestroy() {
         super.onDestroy()
         if (EventBus.getDefault().isRegistered(this))
@@ -100,9 +111,9 @@ abstract class BaseFragment<VM : BaseViewModel, VB : ViewBinding> : Fragment() {
     }
 
     //事件传递
-    @Subscribe
-    fun onEventMainThread(msg: EventMessage) {
-        handleEvent(msg)
+    @Subscribe(threadMode = ThreadMode.MAIN,sticky = true)
+    fun onEventMainThread(event: MessageEvent) {
+        handleEvent(event)
     }
 
     open fun getClassName(): String? {
@@ -162,7 +173,7 @@ abstract class BaseFragment<VM : BaseViewModel, VB : ViewBinding> : Fragment() {
     /**
      * 消息、事件接收回调
      */
-    open fun handleEvent(msg: EventMessage) {}
+    open fun handleEvent(event: MessageEvent) {}
 
     /**
      * 接口请求错误回调
@@ -173,4 +184,6 @@ abstract class BaseFragment<VM : BaseViewModel, VB : ViewBinding> : Fragment() {
         super.onDestroyView()
         contentView = null
     }
+
+
 }

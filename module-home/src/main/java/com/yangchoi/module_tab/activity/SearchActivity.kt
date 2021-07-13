@@ -8,6 +8,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.alibaba.android.arouter.launcher.ARouter
 import com.blankj.utilcode.util.GsonUtils
 import com.yangchoi.lib_base.base.BaseActivity
+import com.yangchoi.lib_base.utils.MessageEvent
+import com.yangchoi.lib_base.utils.MessageInfo
+import com.yangchoi.lib_base.utils.MessageType
 import com.yangchoi.lib_network.entity.HotKeyEntity
 import com.yangchoi.lib_public.utils.ARouterUtil
 import com.yangchoi.lib_public.utils.TimeUtil
@@ -18,6 +21,7 @@ import com.yangchoi.module_tab.dao.db
 import com.yangchoi.module_tab.databinding.ActivitySearchBinding
 import com.yangchoi.module_tab.utils.DaoUtil
 import com.yangchoi.module_tab.viewmodel.SearchActivityVM
+import org.greenrobot.eventbus.EventBus
 import kotlin.concurrent.thread
 
 /**
@@ -59,7 +63,7 @@ class SearchActivity : BaseActivity<SearchActivityVM, ActivitySearchBinding>() {
     }
 
     override fun initVM() {
-
+        EventBus.getDefault().post(MessageEvent(MessageType.RefreshData).put(MessageInfo.RefreshOrderInfo))
         vm.hotKeyList.observe(this, Observer {
             if (!it.isNullOrEmpty())
                 initHotKey(it)
