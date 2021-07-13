@@ -17,7 +17,7 @@ import java.util.*
  * describe:
  */
 class HotKeyAdapter(context: Activity,private val dataList:MutableList<HotKeyEntity>)
-    : BaseAdapter<ItemHotKeyBinding,HotKeyEntity>(context,dataList as ArrayList<HotKeyEntity>) {
+    : BaseAdapter<ItemHotKeyBinding,HotKeyEntity>(context,dataList) {
 
     private var mInflater: LayoutInflater? = null
     private val mFlexItemTextViewCaches: Queue<TextView> = LinkedList()

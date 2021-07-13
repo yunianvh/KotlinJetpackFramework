@@ -155,12 +155,12 @@ abstract class BaseActivity<VM: BaseViewModel,VB: ViewBinding> : AppCompatActivi
      * */
     @Subscribe(threadMode = ThreadMode.MAIN,sticky = true)
     fun onEventMainThread(event: MessageEvent) {
-        handleEvent(event)
+        onActivityEvent(event)
     }
     /**
      * 消息、事件接收回调
      */
-    open fun handleEvent(event: MessageEvent) {
+    open fun onActivityEvent(event: MessageEvent) {
 
     }
 }

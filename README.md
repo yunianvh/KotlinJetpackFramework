@@ -186,14 +186,28 @@
     class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>()
 
 ### 扩展至BaseAdapter
-    class HomeArticleAdapter(context:Activity,listData:MutableList<ArticleBean>)
-        : BaseAdapter<ItemHomeArticleBinding,ArticleBean>(context,listData as ArrayList<ArticleBean>)
+    class HotKeyAdapter(context: Activity,private val dataList:MutableList<HotKeyEntity>)
+        : BaseAdapter<ItemHotKeyBinding,HotKeyEntity>(context,dataList) {
 
     参数解析:
     1.context:Activity 只能是Activity的上下文
-    2.listData:MutableList<ArticleBean> 数据源  BaseAdapter接收的是ArrayList形式的，所以要进行转换
-    3.ItemHomeArticleBinding 注入布局，和上面的activity、fragment一致
-    4.ArticleBean 数据类型
+    2.dataList:MutableList<HotKeyEntity> 数据源
+    3.ItemHotKeyBinding 注入布局，和上面的activity、fragment一致
+    4.HotKeyEntity 数据类型
+    5.设置新数据
+    fun setNewData(dataListAD: MutableList<T>){
+        this.dataListAD = dataListAD
+        notifyDataSetChanged()
+    }
+
+    6.获取当前adapter的数据
+    fun getADDataList():MutableList<T>{
+        return dataListAD
+    }
+
+    7.单击事件 setOnItemClick
+    8.长按事件 setOnItemLongClick
+
 
 ### EventBus封装
     1.定义消息类型,这里只做举例说明,具体根据需求定义
@@ -217,8 +231,8 @@
     MessageType.RefreshData //消息类型
     MessageInfo.RefreshOrderInfo //消息类型后的具体内容(可以不传,不传的情况下最好是通过消息类型来判定操作)
 
-    7.重写handleEvent方法执行具体操作
-    override fun handleEvent(event: MessageEvent) {
+    7.重写onActivityEvent 或 onFragmentEvent方法执行具体操作
+    override fun onFragmentEvent/onActivityEvent(event: MessageEvent) {
         super.handleEvent(event)
         when(event.type){
             MessageType.RefreshData ->{

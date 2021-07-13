@@ -113,7 +113,7 @@ abstract class BaseFragment<VM : BaseViewModel, VB : ViewBinding> : Fragment() {
     //事件传递
     @Subscribe(threadMode = ThreadMode.MAIN,sticky = true)
     fun onEventMainThread(event: MessageEvent) {
-        handleEvent(event)
+        onFragmentEvent(event)
     }
 
     open fun getClassName(): String? {
@@ -173,7 +173,7 @@ abstract class BaseFragment<VM : BaseViewModel, VB : ViewBinding> : Fragment() {
     /**
      * 消息、事件接收回调
      */
-    open fun handleEvent(event: MessageEvent) {}
+    open fun onFragmentEvent(event: MessageEvent) {}
 
     /**
      * 接口请求错误回调
