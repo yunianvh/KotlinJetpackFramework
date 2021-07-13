@@ -194,3 +194,37 @@
     2.listData:MutableList<ArticleBean> 数据源  BaseAdapter接收的是ArrayList形式的，所以要进行转换
     3.ItemHomeArticleBinding 注入布局，和上面的activity、fragment一致
     4.ArticleBean 数据类型
+
+### EventBus封装
+    1.定义消息类型,这里只做举例说明,具体根据需求定义
+    enum class MessageType {
+        ShowToast,//弹出toast
+        ShowLog,//打印log
+        RefreshData,//刷新数据,具体刷新哪里的数据根据string的值区分
+    }
+
+    2.定义消息内部信息,比如多个消息类型都是RefreshData那么可以通过消息内部信息来区分具体操作
+    object MessageInfo{
+        const val RefreshOrderInfo = "refresh_order_info"//刷新订单列表
+    }
+
+    3.通过data class MessageEvent(var type:MessageType) 选择对应的消息类型
+
+    4.通过MessageEvent().put(param)的方法来传递参数
+    5.通过event.get方法来获取传递的参数
+    6.发送消息
+    EventBus.getDefault().post(MessageEvent(MessageType.RefreshData).put(MessageInfo.RefreshOrderInfo))
+    MessageType.RefreshData //消息类型
+    MessageInfo.RefreshOrderInfo //消息类型后的具体内容(可以不传,不传的情况下最好是通过消息类型来判定操作)
+
+    7.重写handleEvent方法执行具体操作
+    override fun handleEvent(event: MessageEvent) {
+        super.handleEvent(event)
+        when(event.type){
+            MessageType.RefreshData ->{
+                if (event.getString().equals(MessageInfo.RefreshOrderInfo)){
+                    Log.e("EventTAG","刷新数据")
+                }
+            }
+        }
+    }
