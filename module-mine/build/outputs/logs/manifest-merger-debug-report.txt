@@ -1,8 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:2:1-9:12
-INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:2:1-9:12
-INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:2:1-9:12
+ADDED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:2:1-10:12
+INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:2:1-10:12
+INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:2:1-10:12
 	package
 		ADDED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml
@@ -10,11 +10,15 @@ INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\
 	xmlns:android
 		ADDED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:5:5-7:19
+ADDED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:5:5-8:19
 activity#com.yangchoi.module_mine.activity.UserInfoActivity
 ADDED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:6:9-62
 	android:name
 		ADDED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:6:19-60
+activity#com.yangchoi.module_mine.activity.AboutUsActivity
+ADDED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:7:9-61
+	android:name
+		ADDED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml:7:19-59
 uses-sdk
 INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\android\android project\KotlinJetpackFramework\module-mine\src\main\AndroidManifest.xml

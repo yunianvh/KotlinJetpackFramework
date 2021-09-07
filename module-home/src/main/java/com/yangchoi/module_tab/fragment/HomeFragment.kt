@@ -87,8 +87,8 @@ class HomeFragment : BaseFragment<HomeFragmentVM, FragmentHomeBinding>(),View.On
         }
     }
 
-    override fun handleEvent(event: MessageEvent) {
-        super.handleEvent(event)
+    override fun onFragmentEvent(event: MessageEvent) {
+        super.onFragmentEvent(event)
         when(event.type){
             MessageType.RefreshData ->{
                 if (event.getString().equals(MessageInfo.RefreshOrderInfo)){

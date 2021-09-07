@@ -17,5 +17,6 @@ object ARouterUtil {
      * module-mine
      * */
     const val UserInfoActivity = "/mine/user_info_activity" // 个人中心
+    const val AboutUsActivity = "/mine/about_us_activity" //关于我们
 
 }

@@ -8,6 +8,7 @@
 
     <application>
         <activity android:name="com.yangchoi.module_mine.activity.UserInfoActivity" />
+        <activity android:name="com.yangchoi.module_mine.activity.AboutUsActivity" />
     </application>
 
 </manifest>

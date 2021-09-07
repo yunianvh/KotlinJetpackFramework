@@ -2485,6 +2485,7 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id to_about_us
 id toolbar_title
 id top
 id topPanel

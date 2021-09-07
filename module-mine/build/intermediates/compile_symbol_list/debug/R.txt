@@ -2572,6 +2572,7 @@ int layout abc_search_dropdown_item_icons_2line 0x0
 int layout abc_search_view 0x0
 int layout abc_select_dialog_material 0x0
 int layout abc_tooltip 0x0
+int layout activity_about_us 0x0
 int layout activity_user_info 0x0
 int layout base_setting 0x0
 int layout base_toolbar 0x0
