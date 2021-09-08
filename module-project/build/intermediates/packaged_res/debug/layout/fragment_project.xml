@@ -5,9 +5,10 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/to_about_us"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Project"
+        android:text="点击跳转关于我们"
         android:textColor="#000"
         android:textSize="20sp"
         android:gravity="center"/>
